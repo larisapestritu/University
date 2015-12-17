@@ -24,13 +24,15 @@ public class WorkMatrix {
 		}
 		return s;
 	}
-	public int SumaMatrix2(){
+	public int Pare(){
 		int s = 0;
 		for (int i = 0; i < matrix.length; i++) {
 			for (int j = 0; j < matrix.length; j++) {
-				s=s+matrix[i][j];
+				if matrix[i][j]%2=0 
+						par=par+1;
+				
 			}
 		}
-		return s;
+		return par;
 	}
 }
