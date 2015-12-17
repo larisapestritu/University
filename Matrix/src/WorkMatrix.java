@@ -24,4 +24,13 @@ public class WorkMatrix {
 		}
 		return s;
 	}
+	public int SumaMatrix2(){
+		int s = 0;
+		for (int i = 0; i < matrix.length; i++) {
+			for (int j = 0; j < matrix.length; j++) {
+				s=s+matrix[i][j];
+			}
+		}
+		return s;
+	}
 }
