@@ -99,6 +99,35 @@ public int[] Even(int[][] matrix) //afiseaza elementele pare
 		}
 	}
 	return temp;}
+
+public int Prim() {
+	int prim = 0;
+	for (int i = 0; i < matrix.length; i++) {
+		for (int j = 0; j < matrix.length; j++) {
+			for (int k = 2; 4 * k < matrix.length; k++)
+				if (matrix[i][j] % k == 0)
+					prim=prim+1;
+		}
+	}
+
+	return prim;
 }
+public int[] AfisPrim(int[][] matrix) // afiseaza nr prime
+{
+
+	int[] temp = new int[0];
+	for (int i = 0; i < matrix.length; i++) {
+		for (int j = 0; j < matrix.length; j++) {
+			for (int k = 2; 4 * k < matrix.length; k++)
+				if (matrix[i][j] % k == 0) {
+					temp = addElement(temp, matrix[i][j]);
+				}
+		}
+	}
+	return temp;
+}
+
+}
+
 
 
