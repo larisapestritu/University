@@ -126,6 +126,33 @@ public int[] AfisPrim(int[][] matrix) // afiseaza nr prime
 	}
 	return temp;
 }
+public double PatratPerf() {
+	double a = 0, pperf = 0;
+	for (int i = 0; i < matrix.length; i++) {
+		for (int j = 0; j < matrix.length; j++) {
+			a = Math.sqrt(matrix[i][j]);
+			if (matrix[i][j] / a == a)
+				pperf=pperf+1;
+		}
+	}
+
+	return pperf;
+}
+public int[] AfisPatratPerf(int[][] matrix) // afiseaza nr patrate perfecte
+{
+	double a = 0;
+	int[] temp = new int[0];
+	for (int i = 0; i < matrix.length; i++) {
+		for (int j = 0; j < matrix.length; j++) {
+			a = Math.sqrt(matrix[i][j]);
+			if (matrix[i][j] / a == a) {
+				temp = addElement(temp, matrix[i][j]);
+			}
+		}
+	}
+	return temp;
+}
+
 
 }
 
