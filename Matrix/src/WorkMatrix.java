@@ -173,6 +173,23 @@ public int SumaImpare() {
 	}
 	return s;
 }
+public int nrpalindrom(int[][] matrix) {
+	int nr = 0;
+	int x = 0;
+	int n;
+	for (int i = 0; i < matrix.length; i++)
+		for (int j = 0; j < matrix.length; j++) {
+			n = 0;
+			x = matrix[i][j];
+			while (x != 0) {
+				n = n * 10 + x % 10;
+				x = x / 10;
+			}
+			if (matrix[i][j] == n)
+				nr++;
+		}
+	return nr;
+}
 
 }
 
