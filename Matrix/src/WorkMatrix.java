@@ -253,6 +253,39 @@ public String CompDiag() {
 
 }
 
+
+public String SumLin() {
+	int s1 = 0, s2 = 0, L1 = 0, L2 = 0, ok = 0;
+	for (int i = 0; i < matrix.length; i++)
+		s1 = s1 + matrix[L1][i];
+	for (int i = 0; i < matrix.length; i++)
+		s2 = s2 + matrix[L2][i];
+	for (int i = 0; i < matrix.length; i++)
+		if (matrix[L1][i] != matrix[L2][i])
+			ok = 0;
+	if (ok == 0)
+		return "Exista linii cu sume identice";
+	else
+		return "Nu exista linii cu sume identice";
+}
+
+public String SumCol() {
+	int s1 = 0, s2 = 0, L1 = 0, L2 = 0, ok = 0;
+	for (int j = 0; j < matrix.length; j++)
+		s1 = s1 + matrix[L1][j];
+	for (int j = 0; j < matrix.length; j++)
+		s2 = s2 + matrix[L2][j];
+	for (int j = 0; j < matrix.length; j++)
+		if (matrix[L1][j] != matrix[L2][j])
+			ok = 0;
+	if (ok == 0)
+		return "Exista coloane cu sume identice";
+	else
+		return "Nu exista coloane cu sume identice";
+}
+
+
+
 }
 
 
