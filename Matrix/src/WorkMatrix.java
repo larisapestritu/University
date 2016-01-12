@@ -232,6 +232,27 @@ public int DiagSec() {
 
 	return s;
 }
+public int SumaElDiagP() {
+	int s = 0;
+	for (int i = 0; i < matrix.length; i++) {
+		for (int j = 0; j < matrix.length; j++)
+			if (i < j)
+				s =s+ matrix[i][j];
+	}
+
+	return s;
+
+}
+
+public String CompDiag() {
+
+	if (DiagPrinc() == DiagSec())
+		return "Sumele sunt egale" + "		" + DiagPrinc() + "=" + DiagSec();
+	else
+		return "Sumele nu sunt egale" + "		" + DiagPrinc() + "!=" + DiagSec();
+
+}
+
 }
 
 
