@@ -217,7 +217,21 @@ public int SumaPrime() {
 
 	return s;
 }
+public int DiagPrinc() {
+	int s = 0;
+	for (int i = 0; i < matrix.length; i++)
+		s = s + matrix[i][i];
 
+	return s;
+}
+
+public int DiagSec() {
+	int s = 1;
+	for (int i = 0; i < matrix.length; i++)
+		s =s+ matrix[i][matrix.length - i - 1];
+
+	return s;
+}
 }
 
 
