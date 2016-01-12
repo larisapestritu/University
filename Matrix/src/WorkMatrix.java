@@ -284,6 +284,45 @@ public String SumCol() {
 		return "Nu exista coloane cu sume identice";
 }
 
+public int[][] Afis2Matrix(int[][] matrix) {
+	int x;
+	for (int i = 0; i < matrix.length; i++) {
+		for (int j = 0; j < matrix.length; j++) {
+			x= matrix[i][j] + i + j;
+			matrix[i][j] = x;
+
+		}
+	}
+	return matrix;
+}
+public int[] AfisLin(int[][] matrix) {
+	
+	System.out.println("Introduceti numarul liniei: ");
+	int a = sc.nextInt();
+
+	int[] temp = new int[0];
+
+	for (int j = 0; j < matrix.length; j++) {
+		temp = addElement(temp, matrix[a][j]);
+	}
+	return temp;
+}
+
+public int[] AfisCol(int[][] matrix) {
+	
+	System.out.println("Introduceti numarul coloanei: ");
+	int a = sc.nextInt();
+	int[] temp = new int[0];
+	for (int i = 0; i < matrix.length; i++) {
+		for (int j = 0; j < matrix.length; j++)
+			if (j == a) {
+				temp = addElement(temp, matrix[i][a]);
+
+			}
+
+	}
+	return temp;
+}
 
 
 }
